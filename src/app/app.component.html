@@ -1,2 +1,31 @@
+<h1>Alter Rectangle Shape, Color and Rotation</h1>
 
-<h1 class="text-3xl font-bold underline">Test App</h1>
+<!-- Color changing -->
+<div class="color-btn-container">
+  <button (click)="changeColor('red')">Red</button>
+  <button (click)="changeColor('blue')">Blue</button>
+  <button (click)="changeColor('green')">Green</button>
+</div>
+
+<!-- Size changing -->
+<div class="slider-container">
+  <label for="width">Width</label>
+  <input type="range" min="100" max="400" (input)="adjustWidth($event)">
+
+  <label for="height">Height</label>
+  <input type="range" min="100" max="400" (input)="adjustHeight($event)">
+</div>
+
+<!-- Rotation -->
+<div class="rotation-btn-container">
+  <button (click)="rotateRectangle('leftRotation')">Left</button>
+  <button (click)="rotateRectangle('rightRotation')">Right</button>
+</div>
+
+<div class="rectangle" [ngStyle]="{ 
+'width.px': rectWidth, 
+'height.px': rectHeight,
+'background-color': rectColor, 
+'transform': 'rotate(' + rotationAngle + 'deg)'
+}">
+</div>

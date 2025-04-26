@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.color-btn-container,
+.rotation-btn-container,
+.slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.color-btn-container button,
+.rotation-btn-container button {
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #eee;
+  transition: background-color 0.3s ease;
+
+}
+
+.color-btn-container button:hover,
+.rotation-btn-container button:hover {
+  background-color: #ddd;
+}
+
+.slider-container label {
+  font-weight: bold;
+}
+
+.rectangle {
+  background-color: lightgray;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto;
+  transition: all 0.3s ease;
+}
